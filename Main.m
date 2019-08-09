@@ -18,7 +18,8 @@ end
 
 % Resultados.
 
-disp("      P      Q      R      S      C");
+disp("      P      Q      R      S      C" + newline);
+
 for i = 1 : length(propMatrix)
     P = propMatrix(i, 1);
     Q = propMatrix(i, 2);
@@ -32,7 +33,7 @@ disp(newline + "---> " + propType(truthTable));
 
 %% 2.
 
-% C = (P jointDenial R) or (P and ~Q) or (~P and R)
+% C = (~P and ~R) or (P and ~Q) or (~P and Q)
 
 clear all;
 clc;
@@ -44,10 +45,11 @@ for i = 1 : length(propMatrix)
     P = propMatrix(i, 1);
     Q = propMatrix(i, 2);
     R = propMatrix(i, 3);
-    truthTable(i, 1) = (jointDenial(P, R)) || (P && ~Q) || (~P && R);
+    truthTable(i, 1) = (~P && ~R) || (P && ~Q) || (~P && Q);
 end
 
-disp("      P      Q      R      C");
+disp("      P      Q      R      C" + newline);
+
 for i = 1 : length(propMatrix)
     P = propMatrix(i, 1);
     Q = propMatrix(i, 2);
@@ -75,7 +77,8 @@ for i = 1 : length(propMatrix)
     truthTable(i, 1) = conditional((~P || ~Q), (~P && R)) || (~Q && P && R);
 end
 
-disp("      P      Q      R      C");
+disp("      P      Q      R      C" + newline);
+
 for i = 1 : length(propMatrix)
     P = propMatrix(i, 1);
     Q = propMatrix(i, 2);

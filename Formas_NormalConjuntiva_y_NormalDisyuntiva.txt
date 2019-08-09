@@ -1,0 +1,33 @@
+
+-> 1.
+
+CNF = Q
+CNF Implies[施mplies[昤,Q],Implies[P,R]]&&Q
+
+DNF = Q
+DNF Implies[施mplies[昤,Q],Implies[P,R]]&&Q
+
+
+-> 2.
+
+DNF = (P and 昨) or (星 and Q) or (昨 and 昱)
+DNF (星&&昱)||(P&&昨)||(星&&Q)
+
+CNF = (星 or 昨) and (P or Q or 昱)
+CNF (星&&昱)||(P&&昨)||(星&&Q)
+
+
+-> 3.
+
+DNF = (P and Q) or R
+DNF Implies[星||昨,星&&R]||(昨&&P&&R)
+
+CNF = (P or R) and (Q or R)
+CNF Implies[星||昨,星&&R]||(昨&&P&&R)
+
+
+----------------------------------------------
+
+https://www.wolframalpha.com/input/?i=CNF
+https://www.wolframalpha.com/input/?i=DNF
+
